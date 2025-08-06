@@ -7,8 +7,8 @@ jobs:
     first_job:
         strategy:
             matrix:
-                operating syatem: [ubuntu-latest, windows-latest]
-        runs-on: ubuntu-latest
+                operating-system: [ubuntu-latest, windows-latest]
+        runs-on: ${{ matrix.operating-system }}
         steps:
             - name: first action
               run: echo "job accomplished"
