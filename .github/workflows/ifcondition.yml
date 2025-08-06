@@ -10,7 +10,7 @@ jobs:
         steps:
             - name: first step
               id: first_step
-              run: echo21 "This is first simple step without any condition"
+              run: echo "This is first simple step without any condition"
 
     Second_normal_job:
         needs: first_normal_job
@@ -20,7 +20,7 @@ jobs:
               run: echo8 "This is first simple step without any condition"
 
     Second_job:
-        needs: first_normal_job
+        needs: Second_normal_job
         runs-on: ubuntu-latest
         if: failure()
         steps:
