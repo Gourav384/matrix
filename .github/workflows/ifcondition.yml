@@ -20,8 +20,8 @@ jobs:
               run: echo12 "This is first simple step without any condition"
 
     Second_job:
-        if: failure()
         runs-on: ubuntu-latest
+        if: failure()
         steps:
             - name: now this should be running when earlier got failed
               run: echo "Done"
