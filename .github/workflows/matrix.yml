@@ -12,3 +12,5 @@ jobs:
         steps:
             - name: first action
               run: echo "job accomplished"
+            - name: repeat
+              run: echo "repeat composite custom github action"

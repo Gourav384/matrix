@@ -1,0 +1,7 @@
+name: repeat action
+description: just repeated stuff
+run:
+    using: composite
+    steps:
+        - name: repeat
+          run: echo "repeat composite custom github action"

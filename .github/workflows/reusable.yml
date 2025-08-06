@@ -4,5 +4,5 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: test if i can write
-              run: echo "JOB REUSABLE IS WORKING"
+            - name: Checking
+              uses: ./.github/actions
