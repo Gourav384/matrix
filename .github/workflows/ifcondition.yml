@@ -2,7 +2,7 @@ name: if condition
 on:
     push:
         branches:
-            - main
+            - master
     workflow_dispatch:
 jobs:
     first_normal_job:
@@ -17,10 +17,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: first step
-              run: echo "This is first simple step without any condition"                      
+              run: echo "This is first simple step without any condition"
+
     Second_job:
-        runs-on: ubuntu-latest
         if: failure()
+        runs-on: ubuntu-latest
         steps:
             - name: now this should be running when earlier got failed
-              run:
+              run: echo "Done"
