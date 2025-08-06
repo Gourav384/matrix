@@ -1,0 +1,8 @@
+name: reusable
+on: workflow_call
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: test if i can write
+              run: echo "JOB REUSABLE IS WORKING"
